@@ -1,13 +1,13 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const blogRouter = require("./routes/BlogRoutes");
+const userRouter = require("./routes/UserRoutes");
 
 const app = express();
 
 //middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use("/api/blogs", blogRouter);
+app.use("/api/users", userRouter);
 
 //configure mongoose
 mongoose.connect(
